@@ -40,7 +40,7 @@ public class FelineTest {
         Feline feline = new Feline();
         int expectedKittens = 6;
         int actualKittens = feline.getKittens(6);
-        assertEquals("возвращаться должно заданное количество котяток",
+        assertEquals("возвращаться должно заданное количество котяток)",
                 expectedKittens, actualKittens);
     }
 }

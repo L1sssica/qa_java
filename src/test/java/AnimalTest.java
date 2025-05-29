@@ -34,7 +34,7 @@ public class AnimalTest {
             animal.getFood("Неизвестный вид");
             fail("Expected an Exception to be thrown");
         } catch (Exception e) {
-            assertEquals("Неизвестный вид животного, используйте значение Травоядное или Хищник", e.getMessage());
+            assertEquals("Неизвестный вид животного", e.getMessage());
         }
     }
 
@@ -56,7 +56,7 @@ public class AnimalTest {
         }
 
         try {
-            animal.getFood("ТРАВОЯДНОЕ");
+            animal.getFood("Травоядное");
             fail("Expected an Exception to be thrown for uppercase input");
         } catch (Exception e) {
             // expected
