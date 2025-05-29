@@ -52,14 +52,14 @@ public class AnimalTest {
             animal.getFood("хищник");
             fail("Expected an Exception to be thrown for lowercase input");
         } catch (Exception e) {
-            // expected
+
         }
 
         try {
             animal.getFood("Травоядное");
             fail("Expected an Exception to be thrown for uppercase input");
         } catch (Exception e) {
-            // expected
+
         }
     }
 }
