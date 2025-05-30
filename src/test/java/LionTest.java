@@ -44,7 +44,7 @@ public class LionTest {
     @Test
     public void testGetFood() throws Exception {
         Lion lion = new Lion("Самка", felineMock);
-        List<String> expectedFood = List.of("Мясо", "Рыба");
+        List<String> expectedFood = List.of(":Животные", "Птицы", "Рыба");
         when(felineMock.getFood("Хищник")).thenReturn(expectedFood);
         assertEquals(expectedFood, lion.getFood());
         verify(felineMock).getFood("Хищник");

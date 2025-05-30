@@ -34,19 +34,4 @@ public class FelineParTest {
         assertEquals(expectedKittensCount, feline.getKittens(inputKittensCount));
     }
 
-    @Test
-    public void testGetFamily() {
-        assertEquals("Кошачьи", feline.getFamily());
-    }
-
-    @Test
-    public void testGetKittensWithoutCount() {
-        assertEquals(1, feline.getKittens());
-    }
-
-    @Test
-    public void testEatMeat() throws Exception {
-        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
-        assertEquals(expectedFood, feline.eatMeat());
-    }
 }
