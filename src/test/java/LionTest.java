@@ -34,19 +34,31 @@ public class LionTest {
     }
 
     @Test
-    public void testGetKittens() throws Exception {
+    public void testGetKittensReturnsCorrectValue() throws Exception {
         Lion lion = new Lion("Самец", felineMock);
         when(felineMock.getKittens()).thenReturn(3);
         assertEquals(3, lion.getKittens());
+    }
+
+    @Test
+    public void testGetKittensCallsFelineMethod() throws Exception {
+        Lion lion = new Lion("Самец", felineMock);
+        lion.getKittens();
         verify(felineMock).getKittens();
     }
 
     @Test
-    public void testGetFood() throws Exception {
+    public void testGetFoodReturnsCorrectValue() throws Exception {
         Lion lion = new Lion("Самка", felineMock);
         List<String> expectedFood = List.of(":Животные", "Птицы", "Рыба");
         when(felineMock.getFood("Хищник")).thenReturn(expectedFood);
         assertEquals(expectedFood, lion.getFood());
+    }
+
+    @Test
+    public void testGetFoodCallsFelineMethodWithCorrectArgument() throws Exception {
+        Lion lion = new Lion("Самка", felineMock);
+        lion.getFood();
         verify(felineMock).getFood("Хищник");
     }
 }
